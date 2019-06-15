@@ -1,6 +1,5 @@
 # PROBLEM:
 Unity.Mathematics' types agressively implicitly cast. Using these as method arguments leads to unproductive complexity.
-Example:
 ```C#
 // Let's play a game. Guess which overload is going to be called here:
 class Example
