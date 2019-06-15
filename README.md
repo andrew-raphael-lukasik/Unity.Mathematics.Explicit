@@ -22,12 +22,12 @@ class Example
 {
     void Houston ()
     {
-        WeHaveAProblem( 10 , 20f , int3.zero );//COMPILER: "cannot convert from int to FLOAT3"
+        WeDontHaveAProblem( 10 , 20f , int3.zero );//COMPILER: "cannot convert from int to FLOAT3"
         
-        WeHaveAProblem( float3.zero , Vector3.zero , float3.zero );// OK
-        WeHaveAProblem( int3.zero , int3.zero , Vector3Int.zero );// OK
+        WeDontHaveAProblem( float3.zero , Vector3.zero , float3.zero );// OK
+        WeDontHaveAProblem( int3.zero , int3.zero , Vector3Int.zero );// OK
     }
-    void WeHaveAProblem ( FLOAT3 arg0 , FLOAT3 arg1 , FLOAT3 arg2 ) {}
-    void WeHaveAProblem ( INT3 arg0 , INT3 arg1 , INT3 arg2 ) {}
+    void WeDontHaveAProblem ( FLOAT3 arg0 , FLOAT3 arg1 , FLOAT3 arg2 ) {}
+    void WeDontHaveAProblem ( INT3 arg0 , INT3 arg1 , INT3 arg2 ) {}
 }
 ```
