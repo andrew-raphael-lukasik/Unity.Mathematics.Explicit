@@ -6,7 +6,9 @@ class Example
 {
     public void Houston ()
     {
-        WeHaveAProblem( 10 , 20.7f , int3.zero );//COMPILER: This is fine. //BRAIN: What?
+        WeHaveAProblem( 10 , 20.7f , int3.zero );
+        //COMPILER: ^This is fine.
+        //BRAIN: ^What?
     }
     void WeHaveAProblem ( float3 arg0 , float3 arg1 , float3 arg2 )
         => Debug.Log($"(float3 sum:{arg0+arg1+arg2}");
@@ -23,7 +25,9 @@ class Example
 {
     void Houston ()
     {
-        EagleHasLanded( 10 , 20.7f , int3.zero );//COMPILER: "cannot convert from int to FLOAT3" //BRAIN: Thank God!
+        EagleHasLanded( 10 , 20.7f , int3.zero );
+        //COMPILER: ^"cannot convert from int to FLOAT3"
+        //BRAIN: ^Thank God!
         
         EagleHasLanded( float3.zero , Vector3.zero , float3.zero );//BRAIN: OK
         EagleHasLanded( int3.zero , int3.zero , Vector3Int.zero );//BRAIN: OK
