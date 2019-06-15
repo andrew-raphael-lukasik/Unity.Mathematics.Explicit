@@ -6,7 +6,7 @@ class Example
 {
     public void Houston ()
     {
-        WeHaveAProblem( 10 , 20f , int3.zero );
+        WeHaveAProblem( 10 , 20f , int3.zero );//COMPILER: This is totally fine.
     }
     void WeHaveAProblem ( float3 arg0 , float3 arg1 , float3 arg2 ) {}
     void WeHaveAProblem ( int3 arg0 , int3 arg1 , int3 arg2 ) {}
@@ -21,12 +21,12 @@ class Example
 {
     void Houston ()
     {
-        WeDontHaveAProblem( 10 , 20f , int3.zero );//COMPILER: "cannot convert from int to FLOAT3"
+        EagleHasLanded( 10 , 20f , int3.zero );//COMPILER: "cannot convert from int to FLOAT3"
         
-        WeDontHaveAProblem( float3.zero , Vector3.zero , float3.zero );// OK
-        WeDontHaveAProblem( int3.zero , int3.zero , Vector3Int.zero );// OK
+        EagleHasLanded( float3.zero , Vector3.zero , float3.zero );// OK
+        EagleHasLanded( int3.zero , int3.zero , Vector3Int.zero );// OK
     }
-    void WeDontHaveAProblem ( FLOAT3 arg0 , FLOAT3 arg1 , FLOAT3 arg2 ) {}
-    void WeDontHaveAProblem ( INT3 arg0 , INT3 arg1 , INT3 arg2 ) {}
+    void EagleHasLanded ( FLOAT3 arg0 , FLOAT3 arg1 , FLOAT3 arg2 ) {}
+    void EagleHasLanded ( INT3 arg0 , INT3 arg1 , INT3 arg2 ) {}
 }
 ```
