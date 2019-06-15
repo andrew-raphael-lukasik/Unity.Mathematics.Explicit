@@ -6,7 +6,7 @@ class Example
 {
     public void Houston ()
     {
-        WeHaveAProblem( 10 , 20.7f , int3.zero ); //COMPILER: This is fine.
+        WeHaveAProblem( int3.zero , int3.zero , 20f ); //COMPILER: This is fine.
     }
     void WeHaveAProblem ( float3 arg0 , float3 arg1 , float3 arg2 ) {}
     void WeHaveAProblem ( int3 arg0 , int3 arg1 , int3 arg2 ) {}
