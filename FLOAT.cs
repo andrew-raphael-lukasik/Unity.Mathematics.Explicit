@@ -1,7 +1,7 @@
 /// homepage: https://github.com/andrew-raphael-lukasik/Unity.Mathematics.Explicit
 
 /// PROBLEM: Unity.Mathematics' types agressively implicitly cast. Using these as method arguments leads to unproductive complexity.
-/// SOLUTION: Create intermediary types that implicitly cast ONLY to/from very strict equivalents. Use them as method arguments only.
+/// SOLUTION: Create intermediary types that implicitly cast ONLY to/from equivalents. Use them as method arguments only.
 
 using UnityEngine;
 using Unity.Mathematics;
@@ -20,11 +20,11 @@ public struct FLOAT4
     public static implicit operator FLOAT4 ( Vector4 v4 ) => new FLOAT4{ Value=v4 };
     public static implicit operator Vector4 ( FLOAT4 F4 ) => F4.Value;
 
-    public static float4 operator + ( FLOAT4 a , FLOAT4 b ) => a + b;
-    public static float4 operator - ( FLOAT4 a , FLOAT4 b ) => a - b;
-    public static float4 operator * ( FLOAT4 a , FLOAT4 b ) => a * b;
-    public static float4 operator / ( FLOAT4 a , FLOAT4 b ) => a / b;
-    public static float4 operator * ( FLOAT4 F4 , float f ) => F4 * f;
+    public static float4 operator + ( FLOAT4 a , FLOAT4 b ) => a.Value + b.Value;
+    public static float4 operator - ( FLOAT4 a , FLOAT4 b ) => a.Value - b.Value;
+    public static float4 operator * ( FLOAT4 a , FLOAT4 b ) => a.Value * b.Value;
+    public static float4 operator / ( FLOAT4 a , FLOAT4 b ) => a.Value / b.Value;
+    public static float4 operator * ( FLOAT4 F4 , float f ) => F4.Value * f;
 }
 
 public struct FLOAT3
@@ -42,11 +42,11 @@ public struct FLOAT3
     public static implicit operator FLOAT3 ( Vector3 v3 ) => new FLOAT3{ Value=v3 };
     public static implicit operator Vector3 ( FLOAT3 F3 ) => F3.Value;
 
-    public static float3 operator + ( FLOAT3 a , FLOAT3 b ) => a + b;
-    public static float3 operator - ( FLOAT3 a , FLOAT3 b ) => a - b;
-    public static float3 operator * ( FLOAT3 a , FLOAT3 b ) => a * b;
-    public static float3 operator / ( FLOAT3 a , FLOAT3 b ) => a / b;
-    public static float3 operator * ( FLOAT3 F3 , float f ) => F3 * f;
+    public static float3 operator + ( FLOAT3 a , FLOAT3 b ) => a.Value + b.Value;
+    public static float3 operator - ( FLOAT3 a , FLOAT3 b ) => a.Value - b.Value;
+    public static float3 operator * ( FLOAT3 a , FLOAT3 b ) => a.Value * b.Value;
+    public static float3 operator / ( FLOAT3 a , FLOAT3 b ) => a.Value / b.Value;
+    public static float3 operator * ( FLOAT3 F3 , float f ) => F3.Value * f;
 }
 
 public struct FLOAT2
@@ -61,9 +61,9 @@ public struct FLOAT2
     public static implicit operator FLOAT2 ( Vector2 v2 ) => new FLOAT2{ Value=v2 };
     public static implicit operator Vector2 ( FLOAT2 F2 ) => F2.Value;
     
-    public static float2 operator + ( FLOAT2 a , FLOAT2 b ) => a + b;
-    public static float2 operator - ( FLOAT2 a , FLOAT2 b ) => a - b;
-    public static float2 operator * ( FLOAT2 a , FLOAT2 b ) => a * b;
-    public static float2 operator / ( FLOAT2 a , FLOAT2 b ) => a / b;
-    public static float2 operator * ( FLOAT2 F2 , float f ) => F2 * f;
+    public static float2 operator + ( FLOAT2 a , FLOAT2 b ) => a.Value + b.Value;
+    public static float2 operator - ( FLOAT2 a , FLOAT2 b ) => a.Value - b.Value;
+    public static float2 operator * ( FLOAT2 a , FLOAT2 b ) => a.Value * b.Value;
+    public static float2 operator / ( FLOAT2 a , FLOAT2 b ) => a.Value / b.Value;
+    public static float2 operator * ( FLOAT2 F2 , float f ) => F2.Value * f;
 }
