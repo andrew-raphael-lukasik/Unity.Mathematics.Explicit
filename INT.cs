@@ -23,6 +23,8 @@ public struct INT4
     public static int4 operator * ( INT4 a , INT4 b ) => a.Value * b.Value;
     public static int4 operator / ( INT4 a , INT4 b ) => a.Value / b.Value;
     public static int4 operator * ( INT4 F3 , int f ) => F3.Value * f;
+
+    override public string ToString () => this.Value.ToString();
 }
 
 public struct INT3
@@ -45,6 +47,8 @@ public struct INT3
     public static int3 operator * ( INT3 a , INT3 b ) => a.Value * b.Value;
     public static int3 operator / ( INT3 a , INT3 b ) => a.Value / b.Value;
     public static int3 operator * ( INT3 F3 , int f ) => F3.Value * f;
+
+    override public string ToString () => this.Value.ToString();
 }
 
 public struct INT2
@@ -64,4 +68,6 @@ public struct INT2
     public static int2 operator * ( INT2 a , INT2 b ) => a.Value * b.Value;
     public static int2 operator / ( INT2 a , INT2 b ) => a.Value / b.Value;
     public static int2 operator * ( INT2 F2 , int f ) => F2.Value * f;
+
+    override public string ToString () => this.Value.ToString();
 }
