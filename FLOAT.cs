@@ -25,6 +25,8 @@ public struct FLOAT4
     public static float4 operator * ( FLOAT4 a , FLOAT4 b ) => a.Value * b.Value;
     public static float4 operator / ( FLOAT4 a , FLOAT4 b ) => a.Value / b.Value;
     public static float4 operator * ( FLOAT4 F4 , float f ) => F4.Value * f;
+
+    override public string ToString () => this.Value.ToString();
 }
 
 public struct FLOAT3
@@ -47,6 +49,8 @@ public struct FLOAT3
     public static float3 operator * ( FLOAT3 a , FLOAT3 b ) => a.Value * b.Value;
     public static float3 operator / ( FLOAT3 a , FLOAT3 b ) => a.Value / b.Value;
     public static float3 operator * ( FLOAT3 F3 , float f ) => F3.Value * f;
+
+    override public string ToString () => this.Value.ToString();
 }
 
 public struct FLOAT2
@@ -66,4 +70,6 @@ public struct FLOAT2
     public static float2 operator * ( FLOAT2 a , FLOAT2 b ) => a.Value * b.Value;
     public static float2 operator / ( FLOAT2 a , FLOAT2 b ) => a.Value / b.Value;
     public static float2 operator * ( FLOAT2 F2 , float f ) => F2.Value * f;
+
+    override public string ToString () => this.Value.ToString();
 }
