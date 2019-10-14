@@ -1,5 +1,5 @@
 # PROBLEM:
-Unity.Mathematics' types implicitly cast agressively. Using these as method arguments leads to unproductive complexity.
+Unity.Mathematics' types implicitly cast too agressively in my observation. Using these as method arguments renders method overloading unusable.
 ```C#
 // Let's play a game. Guess which overload is going to be called here:
 class Example
