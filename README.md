@@ -16,7 +16,7 @@ class Example
 ```
 
 # SOLUTION:
-Create intermediary types that implicitly cast ONLY to/from strict equivalents. Use them as method arguments.
+Create intermediary types that implicitly cast ONLY to/from strict equivalents. Use them as method parameters.
 ```C#
 class Example
 {
