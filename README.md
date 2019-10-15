@@ -1,5 +1,5 @@
 # PROBLEM:
-Unity.Mathematics' types implicitly cast too agressively in my observation. Using these as method arguments renders method overloading unusable.
+Unity.Mathematics' types implicitly cast too agressively in my observation. Using these as method parameters renders method overloading unusable.
 ```C#
 // Let's play a game. Guess which overload is going to be called here:
 class Example
