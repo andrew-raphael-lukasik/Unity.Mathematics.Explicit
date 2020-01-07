@@ -1,7 +1,7 @@
 # PROBLEM:
-Unity.Mathematics' types implicitly cast too agressively in my observation. Using these as method parameters renders method overloading unusable.
+Unity.Mathematics' types are super useful but, mimicking shader math, implicitly cast very agressively. Those types were built to be used in enclosed computation blocks. But it's sometimes very useful to use them outside their intended environment. And this is where we hit a roadblock: intN and floatN types in method parameters are risky or even practically unusable (as in case of method overloading).
 ```C#
-// Let's play a game. Guess which overload is going to be called here:
+// To illustrate a point, let's play a game. Guess which overload is going to be called here:
 class Example
 {
     public void Houston ()
